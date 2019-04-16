@@ -1,5 +1,5 @@
 docker build -t yaf20030918/multi-client:latest -t yaf20030918/multi-client:$SHA -f ./client/Dockerfile ./client
-docker bulid -t yaf20030918/multi-server:latest -t yaf20030918/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t yaf20030918/multi-server:latest -t yaf20030918/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t yaf20030918/multi-worker:latest -t yaf20030918/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push yaf20030918/multi-client:latest 

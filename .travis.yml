@@ -12,7 +12,7 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project tidal-triumph-237710
-  - gcloud config set compoute/zone asia-east1-a	
+  - gcloud config set compute/zone asia-east1-a	
   - gcloud container cluster get-credentials multi-cluster
   - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
   - docker build -t react-test -f ./client/Dockerfile.dev ./client

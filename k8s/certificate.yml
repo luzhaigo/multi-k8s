@@ -1,0 +1,22 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: k8s-multi-com-tls
+spec:
+  secretName: k8s-multi-com
+  issuerRef: 
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: luzhaigo-multi-k8s.com
+  dnsNames:
+    - luzhaigo-multi-k8s.com
+    - wwww.luzhaigo-multi-k8s.com
+    - hi.luzhaigo-multi-k8s.com
+  acme:
+    config:
+      - http01:
+        ingressClass: nginx
+        domains:
+          - luzhaigo-multi-k8s.com
+          - wwww.luzhaigo-multi-k8s.com
+          - hi.luzhaigo-multi-k8s.com

@@ -15,7 +15,7 @@ spec:
   acme:
     config:
       - http01:
-        ingressClass: nginx
+          ingressClass: nginx
         domains:
           - luzhaigo-multi-k8s.com
           - wwww.luzhaigo-multi-k8s.com
